@@ -1,0 +1,7 @@
+Flask
+Flask-Mail
+flask-marshmallow
+Flask-WTF
+Flask-SQLAlchemy
+marshmallow-sqlalchemy
+PyJWT
