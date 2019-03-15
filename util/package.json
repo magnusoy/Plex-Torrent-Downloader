@@ -1,0 +1,14 @@
+{
+  "name": "torrent-builder",
+  "version": "1.0.0",
+  "description": "magnetlink to file",
+  "main": "torrentHandler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "magnusoy (Magnus Kvendseth Øye)",
+  "license": "MIT",
+  "dependencies": {
+    "webtorrent": "^0.103.1"
+  }
+}
