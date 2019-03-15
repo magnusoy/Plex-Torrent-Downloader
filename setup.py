@@ -13,6 +13,6 @@ setup(
         'Flask-WTF',
         'Flask-SQLAlchemy',
         'marshmallow-sqlalchemy',
-       ' PyJWT'
+        'Naked'
     ],
 )
