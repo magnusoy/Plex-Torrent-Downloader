@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}Kontakt{% endblock %}
+{% block head %}
+{{ super() }}
+<link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="content">
+<h2>Kontakt</h2>
+ 
+{% if success %}
+  <p>Takk for meldingen. Vi vil komme tilbake til deg så raskt som mulig.</p>
+
+{% else %}
+
+  {% for message in form.name.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.email.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.subject.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.message.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  <form action="{{ url_for('contact') }}" method=post>
+    {{ form.hidden_tag() }}
+
+    <h5>Navn</h5>
+    {{ form.name }}
+
+    <h5>Email</h5>
+    {{ form.email }}
+
+    <h5>Emne</h5>
+    {{ form.subject }}
+
+    <h5>Melding</h5>
+    {{ form.message }}
+
+    {{ form.submit }}
+  </form>
+</div>
+{% endif %}
+{% endblock %}

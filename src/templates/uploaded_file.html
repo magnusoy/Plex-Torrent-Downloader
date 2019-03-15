@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Suksess{% endblock %}
+{% block head %}
+{{ super() }}
+<link
+  href="{{ url_for('static', filename='css/index.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %}
+{% block content %}
+ <h5>Filen er lagt inn i systemet.</h5>
+{% endblock %}

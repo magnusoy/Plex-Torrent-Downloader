@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block title %}Hjem{% endblock %} {% block head %}
+{{ super() }}
+<link
+  href="{{ url_for('static', filename='css/index.css') }}"
+  rel="stylesheet"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="center">
+  <h4>Skriv inn magnetlink</h4>
+  <form method="POST">
+    <input name="text" id="magnetlink" />
+    <input type="submit" value="Last opp">
+  </form>
+</div>
+{% endblock %}
